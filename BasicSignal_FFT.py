@@ -1,7 +1,7 @@
 #   Python program 
         # 1. to generate basic synthetic sinusoidal wave 
         # 2. to plot the sinusoidal signal
-        # 3. to compute fourier spectrum using FFT
+        # 3. to compute Fourier spectrum using FFT
         # 4. plot double side spectrum
         # 5. plot one side spectrum
         
@@ -33,7 +33,7 @@ plt.ylabel('amplitude')
 plt.show()
 
 
-# %%  1.  computation spectrum using FFT 
+# %%  1.  computation of spectrum using FFT 
 
 from scipy.fft import fft, fftfreq
 #  signal with frequency of 20 Hz
@@ -60,7 +60,7 @@ plt.ylabel('magnitude')
 plt.show()
 
 
-# %% display one side spectrum
+# display one side spectrum
 from scipy.fft import rfft, rfftfreq
 
 # yf = rfft(sig1Norm)
@@ -71,4 +71,4 @@ plt.plot(xf, np.abs(yf))
 plt.xlabel('frequency')
 plt.ylabel('magnitude')
 plt.show()
-# %%
+
