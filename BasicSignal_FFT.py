@@ -72,3 +72,41 @@ plt.xlabel('frequency')
 plt.ylabel('magnitude')
 plt.show()
 
+#   2.  computation of spectrum using FFT 
+
+#  signal with frequency of 200 Hz
+f = 200
+signal2 = maxAmp*np.sin((2 * np.pi)*discT * f)
+N = sampleRate * timeMax
+
+plt.figure()
+plt.plot(discT, signal2)
+plt.xlabel('time')
+plt.ylabel('amplitude')
+plt.show()
+
+
+# using FFT to compute spectrum
+yf = fft(signal2)
+# constructing frequency vector 
+xf = fftfreq(N, 1 / sampleRate)
+# plot the double side spectrum
+plt.figure()
+plt.plot(xf, np.abs(yf))
+plt.xlabel('frequency')
+plt.ylabel('magnitude')
+plt.show()
+
+
+# display one side spectrum
+from scipy.fft import rfft, rfftfreq
+
+# yf = rfft(sig1Norm)
+yf = rfft(signal2)
+xf = rfftfreq(N, 1 / sampleRate)
+
+plt.plot(xf, np.abs(yf))
+plt.xlabel('frequency')
+plt.ylabel('magnitude')
+plt.show()
+
