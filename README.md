@@ -7,7 +7,7 @@ Python program
   4. plot double side spectrum
   5. plot one side spectrum
 
-Basic SignAL Plot
+Basic Signal Plot
 ![image](https://user-images.githubusercontent.com/84017987/158552799-76407b72-7bec-4805-aa34-278dc81dd8af.png)
 
 Typical Spectrum Plot
